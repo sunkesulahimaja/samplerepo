@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 50px;
+            background-color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <form >
+        <div class="container">
+            <h2>fill the form</h2>
+        <label for="idname" >laptop model:</label>
+        <input type="text"  id="idname" onchange="myfunc()"><br>
+        select an opt
+        <select  id="list" onchange="myfunc()">
+            <!-- myChange  C is capital-->
+            <option id="black">black</option>
+            <option id="silver">silver</option>
+            <option id="grey">grey</option>
+            </select>
+        <p id="mypara"></p>
+
+    </div>
+        <script>
+             
+            function myfunc()
+            {
+                let myEntry=document.getElementById("idname").value;
+                let myopt=document.getElementById("list").value;
+                document.getElementById("mypara").innerHTML = "My Laptop model is "+myEntry;
+                alert(`The colour of my laptop is ${myopt}`);
+         
+            }
+            // we can place any text at the placeof hello
+        </script>
+    </form>
+</body>
+</html>
